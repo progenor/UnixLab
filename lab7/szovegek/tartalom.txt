@@ -1,0 +1,3 @@
+elso.txt : Az első cím
+harmadik.txt : A harmadik cím
+masodik.txt : A második cím
