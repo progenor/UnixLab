@@ -1,0 +1,8 @@
+sárga
+export GREP_COLORS="mc=00;36:ms=31:mt=01;33"
+fehér
+export GREP_COLORS="mc=00;36:ms=31:mt=01;38"
+
+
+
+

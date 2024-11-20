@@ -1,0 +1,5 @@
+	if [ -f a.txt ]; then
+		echo a.txt
+	else
+		echo not a.txt
+	fi
