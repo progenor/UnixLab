@@ -6,6 +6,8 @@
 #az ideiglenes fájl neve a szkript folyamat azonosítója, típusa txt
 #tehát $$.txt
 
+source testnumber.sh
+
 #ideiglenes fájlt takarítói függvény
 function takarit() {
     #letörli az ideiglenes fájl
@@ -14,13 +16,23 @@ function takarit() {
     exit 1
 }
 
+function term() {
+    [[ -f $$.txt ]] && move "$$.txt" gyustes.txt
+    exit
+}
+
 #jelzéskezelő
-trap takarit INT QUIT TERM
+trap takarit INT QUIT
+trap term TERM
 
 while true; do
     if ! read -p "Kérek egy sort:" sor; then
         echo "$$.txt a gyűjtött adat"
         break
     fi
-    echo "$sor" >>$$.txt
+    if testnumber "$sor"; then
+        echo "$sor" >>$$.txt
+    else
+        echo "$sor nem szam"
+    fi
 done
