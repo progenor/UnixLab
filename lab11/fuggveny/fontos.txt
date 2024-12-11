@@ -1,0 +1,11 @@
+1. névvel ellátott kód - () csak díszítő
+
+2. a return szerepe csak exit kód:  $? visszatérítés
+
+3. a bemeneti paramétereket úgy kapja, mint egy szkript
+
+4. eredmény visszatérítés (ha van):
+    a. echo
+    b. közös változó (globális) a hívó shell-el
+
+
