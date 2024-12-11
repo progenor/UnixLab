@@ -6,7 +6,7 @@
 #     if testnumber 3 ; then echo egész szám ; fi
 #
 function testnumber() {
-    if [ -z "$1" ]; then
+    if [[ -z $1 ]]; then
         return 1 #nincs argumentum
     fi
 
